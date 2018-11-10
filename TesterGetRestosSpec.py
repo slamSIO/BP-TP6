@@ -1,5 +1,5 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3
+# coding: utf-8
 
 
 def affRestos():
@@ -10,7 +10,7 @@ def affRestos():
             libelleOuverture = 'ouvert'
         else:
             libelleOuverture = 'fermé'
-        print '%02d : %-30s\t(%s)' % (unResto['arrdt'], unResto['nom'], libelleOuverture)
+        print( '{0} : {1}\t{2}'.format( unResto['arrdt'] , unResto['nom'] , libelleOuverture ) )
 
 
 def getRestosSpec( specialite ) :
@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     selectionRestos = getRestosSpec( 'libanais' )
 
-    print 'Restaurants libanais :\n'
+    print( 'Restaurants libanais :\n' )
 
     for unResto in selectionRestos :
-        print '\t-', unResto[ 'nom' ] , '\tArrondissement :' , unResto[ 'arrdt' ]
+        print( '\t-', unResto[ 'nom' ] , '\tArrondissement :' , unResto[ 'arrdt' ] )

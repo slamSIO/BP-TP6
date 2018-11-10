@@ -1,5 +1,5 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3
+# coding: utf-8
 
 
 def affRestos():
@@ -10,7 +10,7 @@ def affRestos():
             libelleOuverture = 'ouvert'
         else:
             libelleOuverture = 'fermé'
-        print '%02d : %-30s\t(%s)' % (unResto['arrdt'], unResto['nom'], libelleOuverture)
+        print( '{0} : {1}\t{2}'.format( unResto['arrdt'] , unResto['nom'] , libelleOuverture ) )
 
 
 def getUnResto( nom ) :
@@ -63,10 +63,10 @@ if __name__ == '__main__':
 
     ]
 
-    print '--- Avant ouverture du restaurant Lobster Bar ---\n'
+    print( '--- Avant ouverture du restaurant Lobster Bar ---\n' )
     affRestos()
 
     ouvrirUnResto( 'Lobster Bar' )
 
-    print '\n\n--- Après ouverture du restaurant Lobster Bar ---\n'
+    print( '\n\n--- Après ouverture du restaurant Lobster Bar ---\n' )
     affRestos()
